@@ -17,18 +17,18 @@ Have you memorized every recycling symbol on every product out there? Yes? Oh...
 * Tensorflow
 * Keras
 
-## MVP Goals
+## Minimum Viable Product (MVP) Goals
 
-[ ] Tensorflow model that can accurately identify symbols used for recycling
-[ ] TF model that can accurately differentiate between the various symbols
+* [ ] Tensorflow model that can accurately identify symbols used for recycling
+* [ ] TF model that can accurately differentiate between the various symbols
 
 ## Stretch Goals
 
-[ ] Design user interface on a web app for public interactions with TF model
-[ ] Upload images via camera access
-[ ] Scan for symbols with video and stop upon symbol recognition
-[ ] Mobile responsiveness
-[ ] Mobile app version (Flutter?)
+* [ ] Design user interface on a web app for public interactions with TF model
+* [ ] Upload images via camera access
+* [ ] Scan for symbols with video and stop upon symbol recognition
+* [ ] Mobile responsiveness
+* [ ] Mobile app version (Flutter?)
 
 ## Daily Sprints Draft
 
