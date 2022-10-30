@@ -1,12 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:firebase_ml_model_downloader/firebase_ml_model_downloader.dart';
 
 void main() async {
+  // Init Firebase
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // Download model
+  await FirebaseModelDownloader.instance
+      .getModel(
+          "recycling-model",
+          FirebaseModelDownloadType.localModel,
+          FirebaseModelDownloadConditions(
+            iosAllowsCellularAccess: true,
+            iosAllowsBackgroundDownloading: false,
+            androidChargingRequired: false,
+            androidWifiRequired: false,
+            androidDeviceIdleRequired: false,
+          ))
+      .then((customModel) {
+    // Download complete. Depending on your app, you could enable the ML
+    // feature, or switch from the local model to the remote model, etc.
+
+    // The CustomModel object contains the local path of the model file,
+    // which you can use to instantiate a TensorFlow Lite interpreter.
+    final localModelPath = customModel.file;
+
+    // ...
+  });
+
+  // Run app
   runApp(const MyApp());
 }
 
@@ -56,7 +83,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  void _incrementCounter() {
+  void _incrementCounter() async {
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
@@ -65,6 +92,13 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+
+    FirebaseCustomModel model = await FirebaseModelDownloader.instance
+        .getModel('recycling-model', FirebaseModelDownloadType.latestModel);
+    print('Name: ${model.name}');
+    print('Size: ${model.size}');
+    print('Hash: ${model.hash}');
+    print(model.file);
   }
 
   @override
