@@ -38,6 +38,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_core: ^2.1.1
   firebase_ml_model_downloader: ^0.2.0+3
+  tflite_flutter: ^0.9.0
+  camera: ^0.10.0+4
+  path_provider: ^2.0.11
+  path: ^1.8.2
 
 dev_dependencies:
   flutter_test:
