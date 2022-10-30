@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "635641722588",
+    "project_id": "tf-recycling",
+    "storage_bucket": "tf-recycling.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635641722588:android:e7caace21e24912a1ce619",
+        "android_client_info": {
+          "package_name": "com.example.my_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635641722588-04kp4jaroasrfl5gak51sc21si918ntj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjjhU6082onqfrQ15fOGNEHltxn1YRv2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "635641722588-04kp4jaroasrfl5gak51sc21si918ntj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "635641722588-njlsh50rj8s3epmlq236ska82o703prr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.myApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
