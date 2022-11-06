@@ -1,3 +1,6 @@
+# Virtual environment
+tensorflow/env
+
 # Miscellaneous
 *.class
 *.log
