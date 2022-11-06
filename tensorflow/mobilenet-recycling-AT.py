@@ -4,8 +4,8 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 
 # file paths
-data_dir = "data/recycling_symbols"
-test_dir = "data/test"
+data_dir = "data/recycling-symbols"
+test_dir = "data/recycling-symbols-test"
 
 # ds settings
 batch_size = 64
