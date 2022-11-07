@@ -1,6 +1,9 @@
 # Virtual environment
 tensorflow/env
 
+# web_app
+*/node_modules
+
 # Miscellaneous
 *.class
 *.log
